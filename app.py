@@ -16,6 +16,7 @@ Run locally
 
 import logging
 import os
+import datetime
 
 from flask import Flask, request, jsonify, g
 
@@ -57,6 +58,8 @@ def create_app(calculate_fn=None) -> Flask:
     if calculate_fn is None:
         from calculator import calculate as _default
         calculate_fn = _default
+    else:
+        continue
 
     app = Flask(__name__)
     _configure_logging(app)
