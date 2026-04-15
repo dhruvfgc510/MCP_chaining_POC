@@ -39,7 +39,7 @@ def _configure_logging(app: Flask) -> None:
     app.logger.setLevel(getattr(logging, log_level, logging.INFO))
     app.logger.propagate = False
 
-
+def timepass()
 def create_app(calculate_fn=None) -> Flask:
     """
     App factory — receives the calculation dependency from the caller.
